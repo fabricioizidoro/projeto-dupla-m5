@@ -15,6 +15,9 @@ const User = require('./models/User')
 // import routes
 
 const livrosRoutes = require('./routes/livrosRoutes')
+const authRoutes = require('./routes/authRoutes')
+
+
 
 // import controller
 const LivrosController = require('./controllers/LivroController')
@@ -61,10 +64,18 @@ app.use(express.static('public'))
 
 // set session to res
 
+app.use((req, res, next) => {
+  if (req.session.userid) {
+      res.locals.session = req.session
+  }
+  next()
+})
+
 
 // routes
 
 app.use('/livros', livrosRoutes)
+app.use('/', authRoutes)
 
 app.get('/', LivrosController.showLivros)
 
