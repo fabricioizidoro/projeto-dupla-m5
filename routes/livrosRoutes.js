@@ -4,8 +4,13 @@ const LivrosController = require('../controllers/LivroController')
 
 const checkAuth = require('../helpers/auth').checkAuth
 
-// controller
+
+router.get('/add', checkAuth, LivrosController.createLivro)
+router.post('/add', checkAuth, LivrosController.createLivroSave)
+router.get('/edit/:id', checkAuth, LivrosController.updateLivro)
+router.post('/edit/', checkAuth, LivrosController.updateLivroSave)
 router.get('/dashboard', checkAuth, LivrosController.dashboard)
-router.get('/', LivrosController.showLivros)
+router.post('/remove', checkAuth, LivrosController.removeLivro)
+router.get('/', checkAuth, LivrosController.showLivros)
 
 module.exports = router

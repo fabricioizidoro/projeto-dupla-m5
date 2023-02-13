@@ -7,28 +7,27 @@ const User = require('./User')
 // User
 
 const Livro = db.define('Livros', {
+    
 
-
-    titulo:{
+    title:{
         type: DataTypes.STRING,
         allowNull: false,
     },
-    ano: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-    },
-    genero: {
+    author: {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    nota: {
-        type: DataTypes.INTEGER,
+    gender: {
+        type: DataTypes.STRING,
         allowNull: false,
     }
+    
+    
     
 })
 
 Livro.belongsTo(User)
 User.hasMany(Livro)
+
 
 module.exports = Livro

@@ -50,7 +50,7 @@ app.use(
     cookie: {
       secure: false,
       maxAge:360000,
-      expires: new Date(Date.now() + 360000),
+      expires: new Date(Date.now() + 3600000),
       httpOnly: true
     }
   }),
@@ -82,6 +82,8 @@ app.get('/', LivrosController.showLivros)
 conn
   //.sync({ force: true})
   .sync()
+  
+  
   .then(() => {
     app.listen(3000)
   })
