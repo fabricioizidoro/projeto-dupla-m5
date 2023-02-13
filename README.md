@@ -1,5 +1,7 @@
 # projeto-dupla-m5
-commit inicial
+Livraria online  para registrar livros 
+com rotas de se registrar, login, adicionar livros, editar, deletar,visualizar seus livros, visualizar livro dos outros usuarios (dashboard) 
+
 dependencias instaladas:
 "bcryptjs" 
    "connect-flash"
@@ -16,3 +18,4 @@ dependencias instaladas:
 Trabaalho  feito com estruturas em javascript , HTML, CSS e  bibliotecas de  javascript
 
 Para inicialização do projeto  instale as dependencias  citadas acima, inicie o XAMPP e Workbench
+De o comando npm start atraves do terminal 
