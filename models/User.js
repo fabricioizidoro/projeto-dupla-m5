@@ -8,15 +8,15 @@ const User = db.define('User', {
 
     name: {
         type: DataTypes.STRING,
-        requre: true
+        require: true
     },
     email: {
         type: DataTypes.STRING,
-        requre: true
+        require: true
     },
     password: {
         type: DataTypes.STRING,
-        requre: true
+        require: true
     },
 })
 

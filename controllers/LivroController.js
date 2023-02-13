@@ -98,14 +98,14 @@ module.exports = class LivrosController {
     static async updateLivroSave(req, res) {
         const id = req.body.id
 
-        const livro = {
+        const livros = {
             title: req.body.title,
             author: req.body.author,
             gender: req.body.gender,
         }
 
         try {
-            await Livro.update(livro, { where: { id: id } })
+            await Livro.update(livros, { where: { id: id } })
 
             req.flash('message', 'Livro atualizado com sucesso')
 
